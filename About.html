@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/df3e01a4e2.js" crossorigin="anonymous"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/x-icon" href="./images/ccit.JPG">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="./images/ccit.JPG" alt="fernays" width="50px" height="50px"> &nbsp;&nbsp;
+        <div class="logo_name">CCIT</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="home">
+          <i class="fa-solid fa-house"></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="About">
+        <i class="fa-solid fa-building"></i>
+         <span class="links_name">About</span>
+       </a>
+       <span class="tooltip">About</span>
+     </li>
+     <li>
+       <a href="Services">
+        <i class="fa-brands fa-servicestack"></i>
+         <span class="links_name">Services</span>
+       </a>
+       <span class="tooltip">Services</span>
+     </li>
+     <li>
+       <a href="ITSupport">
+        <i class="fa-solid fa-circle-info"></i>
+         <span class="links_name">IT Support</span>
+       </a>
+       <span class="tooltip">IT Support</span>
+     </li>
+     <li>
+       <a href="Contact">
+        <i class="fa-solid fa-address-book"></i>
+         <span class="links_name">Contact</span>
+       </a>
+       <span class="tooltip">Contact</span>
+     </li>
+       <li>
+       <a href="sitemap">
+        <i class="fa-solid fa-map"></i>
+         <span class="links_name">Site Map</span>
+       </a>
+       <span class="tooltip">Site Map</span>
+     </li>
+     <li>
+        <a href="https://logmein.cyberconnectit.com" target="_blank">
+            <i class="fa-solid fa-user"></i>
+          <span class="links_name">End User Portal</span>
+        </a>
+        <span class="tooltip">End User Portal</span>
+      </li>
+    </ul>
+  </div>
+  <center style="margin-left: 80px;">
+    <br>
+   <p>
+    Here at Cyber Connect we know how important it is to keep your business running smoothly and efficiently. Our team of IT support experts are ready 24/7 to help support companies worldwide using the latest technology.
+   </p>
+  </center>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>
